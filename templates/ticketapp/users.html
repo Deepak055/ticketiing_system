@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<form method="POST">
+
     {% if registered %}
     <h1>Successfully registered</h1>
     {% else %}
     <h1>sign up</h1>
     
-    
-    {{employee_form.as_p }}
+    <form enctype="multipart/form-data" method="POST">
+    {{ employee_form.as_p }}
     {{ user_form.as_p }}
-    
+   
     {% csrf_token %}
     
-    <button type="submit">Save</button></h2></center></form>
+    <button type="submit" value="Register">Save</button></h2></center></form>
     {% endif%}</html>
    
